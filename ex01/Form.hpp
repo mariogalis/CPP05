@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:52:07 by magonzal          #+#    #+#             */
-/*   Updated: 2023/10/04 18:56:03 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/18 18:42:34 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,46 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Bureaucrat.hpp"
 
 
 class Form
 {
-    private:
-    
-        std::string _name const;
-        bool        _signed;
-        int         _signgrade const;
-        int         _execgrade const;
+	private:
+	
+		std::string 	_name; 
+		bool        	_signed;
+		const int       _signgrade;
+		const int       _execgrade;
 
+		class GradeTooHighException: public std::exception
+		{
+			public:
 
-    public:
+				const char* what(void) const throw();
+		};
+		class GradeTooLowException: public std::exception
+		{
+			public:
 
-        Form(void);
-        Form(std::string const name, bool sign , int signrade , int execgrade);
-        Form(const Form &copy);
-        Form &operator=(const Form &copy);
-        ~Form(void);
-    
-}
+				const char* what(void) const throw();
+		};
+		
+	public:
+
+		Form(void);
+		Form(std::string const name, bool sign , int signrade , int execgrade);
+		Form(const Form &copy);
+		Form &operator=(const Form &copy);
+		~Form(void);
+
+		std::string	getName(void) const;
+		int			getSigngrade(void) const;
+		int			getExecgrade(void) const;
+		bool		getSigned(void) const;
+
+		void		beSigned(const Bureaucrat &bur);
+	
+};
 
 #endif
