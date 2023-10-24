@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 15:40:49 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/04 18:53:08 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:06:53 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,30 @@
 
 Bureaucrat::Bureaucrat(void) : _name("Unnamed boring Bureaucrat"), _grade(150)
 {
-    std::cout << GREEN << "Unnamed boring Bureaucrat constructor called" << std::endl << RESET;    
+	std::cout << GREEN << _name << " constructor called" << std::endl << RESET;    
 }
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name), _grade(grade)
 {
-    if(name.empty())
-        _name = "Unnamed boring Bureaucrat";
+	if(name.empty())
+		_name = "Unnamed boring Bureaucrat";
 	if (_grade > 150)
 		throw (GradeTooLowException());
 	else if (_grade < 1)
 		throw (GradeTooHighException());
 
-    std::cout  << GREEN << _name<< " constructor called " << std::endl << RESET;
+	std::cout  << GREEN << _name<< " constructor called " << std::endl << RESET;
 }
 
 Bureaucrat::~Bureaucrat(void)
 {
-    std::cout << RED << "The Bureaucrat is dead" << std::endl << RESET;
+	std::cout << RED << "The Bureaucrat is dead" << std::endl << RESET;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
-    *this = copy;
-     std::cout  << GREEN << "Bureaucrat clone machine called" << std::endl << RESET;
+	*this = copy;
+	 std::cout  << GREEN << "Bureaucrat clone machine called" << std::endl << RESET;
 }
 
 /*Getters and Setters*/
@@ -93,19 +93,19 @@ void	Bureaucrat::decrementGrade(int n)
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat)
 {
-	out << "Bureaucrat name : " << bureaucrat.getName();
+	out << bureaucrat.getName();
 	out << " , bureaucrat grade : " << bureaucrat.getGrade();
 	return (out);
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy)
 {
-    if(this != &copy)
+	if(this != &copy)
 	{
 		_grade = copy._grade;
-        _name = copy._name;
+		_name = copy._name;
 	}
-    return(*this);
+	return(*this);
 }
 
 

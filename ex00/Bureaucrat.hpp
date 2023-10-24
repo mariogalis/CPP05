@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 15:40:55 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/04 17:33:07 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:03:20 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@
 # define GREEN				"\x1b[32m"
 
 #include <iostream>
-#include <iomanip>
+
 
 class  Bureaucrat 
 {
-    private:
+	private:
 
-        std::string _name;
-        int         _grade;
+		std::string _name;
+		int         _grade;
 
-        /* Exceptions */
-        
-        class GradeTooHighException: public std::exception
+		/* Exceptions */
+		
+		class GradeTooHighException: public std::exception
 		{
 			public:
 
@@ -43,30 +43,25 @@ class  Bureaucrat
 				const char* what(void) const throw();
 		};
  
-    public:
+	public:
 
-        /*Constructor and Destructor */
-        
-        Bureaucrat(void);
-        Bureaucrat(const Bureaucrat &copy);
-        Bureaucrat(std::string const name, int grade);
-        Bureaucrat &operator=(const Bureaucrat &copy);
-        ~Bureaucrat(void);
+		/*Constructor and Destructor */
+		
+		Bureaucrat(void);
+		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat(std::string const name, int grade);
+		Bureaucrat &operator=(const Bureaucrat &copy);
+		~Bureaucrat(void);
 
-        /*Getters and Setters*/
+		/*Getters and Setters*/
 
-        std::string	getName(void) const;
-        int	getGrade(void) const;
-        
-        /* Functions */
+		std::string	getName(void) const;
+		int	getGrade(void) const;
+		
+		/* Functions */
 
-        void	incrementGrade(int n);
+		void	incrementGrade(int n);
 		void	decrementGrade(int n);
-
-
-
-        
-        
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

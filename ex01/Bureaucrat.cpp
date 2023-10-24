@@ -6,11 +6,12 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 15:40:49 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/04 17:43:12 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:22:15 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 /*Constructor and Destructor */
 
@@ -21,8 +22,6 @@ Bureaucrat::Bureaucrat(void) : _name("Unnamed boring Bureaucrat"), _grade(150)
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name), _grade(grade)
 {
-    if(name.empty())
-        _name = "Unnamed boring Bureaucrat";
 	if (_grade > 150)
 		throw (GradeTooLowException());
 	else if (_grade < 1)
@@ -45,10 +44,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy)
 {
     if(this != &copy)
-	{
 		_grade = copy._grade;
-        _name = copy._name;
-	}
     return(*this);
 }
 
@@ -98,6 +94,23 @@ void	Bureaucrat::decrementGrade(int n)
 	else
 		_grade += n;
 }
+
+void	Bureaucrat::signForm(Form &form)
+{
+	if (form.getSigned())
+		return ;
+	try
+	{
+		form.beSigned(*this);
+		std::cout << GREEN << _name << " signs " << form.getName() << RESET << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		std::cout << RED << _name << " cannot sign " << form.getName() << " because ";
+		std::cout << e.what() << RESET << std::endl;
+	}
+}
+
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat)
 {

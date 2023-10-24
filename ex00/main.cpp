@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 15:40:57 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/04 17:50:32 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:12:08 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void)
 	Bureaucrat	bur("Alan", 140);
 	
 	std::cout << YELLOW << bur <<  RESET << std::endl;  //Print Bureaucrat
-    
+	
 	try
 	{
 		bur.decrementGrade(1);
@@ -28,7 +28,7 @@ int	main(void)
 	}
 
 	std::cout << YELLOW << bur << RESET << std::endl ; //Print Bureaucrat
-    
+	
 	try
 	{
 		bur.incrementGrade(130);
@@ -37,9 +37,9 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
-    
+	
 	std::cout << YELLOW << bur << RESET << std::endl;  //Print Bureaucrat
-    
+	
 	try
 	{
 		bur.incrementGrade(11);
@@ -48,9 +48,9 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
-    
+	
 	std::cout << YELLOW << bur << RESET << std::endl;  //Print Bureaucrat
-    
+	
 	try
 	{
 		Bureaucrat	bur2("Mario", 151);
@@ -59,7 +59,7 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
-    
+	
 	try
 	{
 		Bureaucrat	bur2("Mario", 0);
@@ -69,14 +69,15 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 
-    try
+	try
 	{
 		Bureaucrat	bur2("Mario", 100);
+		std::cout << YELLOW << bur2 << RESET << std::endl;  //Print Bureaucrat
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
 
-    return 0;
+	return 0;
 }

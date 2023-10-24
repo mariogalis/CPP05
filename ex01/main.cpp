@@ -6,14 +6,17 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 15:40:57 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/04 17:50:32 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:22:56 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int	main(void)
 {
+	std::cout << BLUE << "\t*********  Previous Tests  *********" <<  RESET << std::endl << std::endl;
+	
 	Bureaucrat	bur("Alan", 140);
 	
 	std::cout << YELLOW << bur <<  RESET << std::endl;  //Print Bureaucrat
@@ -78,5 +81,24 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 
+	std::cout << BLUE << "\t*********  New Tests  *********" <<  RESET << std::endl << std::endl;
+
+	Form		formB("form 28B", 12, 12);
+	Form		formC("form 28C", 12, 12);
+
+	std::cout << bur << RESET << std::endl;  //Print Bureaucrat
+	std::cout << formB << std::endl;
+	bur.signForm(formB);
+	bur.signForm(formB);
+	std::cout << formB << std::endl;
+
+	
+	bur.decrementGrade(20);
+	std::cout << bur << RESET << std::endl;  //Print Bureaucrat
+	bur.signForm(formC);
+	std::cout << formC << std::endl;
+	std::cout << formB << std::endl;
+
     return 0;
 }
+ 

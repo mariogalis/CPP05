@@ -6,7 +6,7 @@
 #    By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/01 15:41:00 by codespace         #+#    #+#              #
-#    Updated: 2023/10/04 17:52:02 by magonzal         ###   ########.fr        #
+#    Updated: 2023/10/24 17:50:10 by magonzal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCSB	=
 
 OBJB	= ${SRCSB:.cpp=.o}
 
-NAME	= Bureaucrat
+NAME	= Forms
 
 CXX	= c++
 

@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:52:07 by magonzal          #+#    #+#             */
-/*   Updated: 2023/10/18 18:42:34 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:49:28 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,16 @@
 #include <iomanip>
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
 
 class Form
 {
 	private:
 	
-		std::string 	_name; 
-		bool        	_signed;
-		const int       _signgrade;
-		const int       _execgrade;
+		const std::string 	_name; 
+		bool        		_signed;    // indicating whether it is signed
+		const int       	_signgrade; // grade required to sign it.
+		const int       	_execgrade; // grade required to execute it.
 
 		class GradeTooHighException: public std::exception
 		{
@@ -48,7 +49,7 @@ class Form
 	public:
 
 		Form(void);
-		Form(std::string const name, bool sign , int signrade , int execgrade);
+		Form(std::string const name, int signrade , int execgrade);
 		Form(const Form &copy);
 		Form &operator=(const Form &copy);
 		~Form(void);
@@ -61,5 +62,8 @@ class Form
 		void		beSigned(const Bureaucrat &bur);
 	
 };
+
+std::ostream &operator<<(std::ostream &out, const Form &form);
+
 
 #endif
