@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 15:38:00 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/19 15:38:02 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/31 17:48:56 by magonzal          #+#    #+#             */
+/*   Updated: 2023/10/31 17:56:42 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 /* Operators */
 
-std::ostream &operator<<(std::ostream &out, const Form &form)
+std::ostream &operator<<(std::ostream &out, const AForm &form)
 {
-	out << "Form name : " << form.getName();
-	out << " , form signing grade : " << form.getSigngrade();
-	out << " , form exec grade : " << form.getSigngrade();
+	out << "AForm name : " << form.getName();
+	out << " , aform signing grade : " << form.getSigngrade();
+	out << " , aform exec grade : " << form.getSigngrade();
 	if (form.getSigned())
 		out << " , signed : yes";
 	else
@@ -27,7 +27,7 @@ std::ostream &operator<<(std::ostream &out, const Form &form)
 	return (out);
 }
 
-Form	&Form::operator=(const Form &other)
+AForm	&AForm::operator=(const AForm &other)
 {
 	if (this != &other)
 		_signed = other._signed;
@@ -36,9 +36,9 @@ Form	&Form::operator=(const Form &other)
 
 /*Constructor and Destructor */
 
-Form::Form(void) : _name("unknown form"),_signed(false), _signgrade(1), _execgrade(1)  {}
+AForm::AForm(void) : _name("unknown form"),_signed(false), _signgrade(1), _execgrade(1)  {}
 
-Form::Form(std::string const name, bool sign , int signrade , int execgrade) : _name(name), _signed(false), _signgrade(signrade), _execgrade(execgrade)
+AForm::AForm(std::string const name, bool sign , int signrade , int execgrade) : _name(name), _signed(false), _signgrade(signrade), _execgrade(execgrade)
 {
     if(name.empty())
         _name = "unknown form";
@@ -49,50 +49,50 @@ Form::Form(std::string const name, bool sign , int signrade , int execgrade) : _
 	_signed = sign;
 }
 
-Form::Form(const Form &copy) :  _name(copy._name), _signgrade(copy._signgrade), _execgrade(copy._execgrade)
+AForm::AForm(const AForm &copy) :  _name(copy._name), _signgrade(copy._signgrade), _execgrade(copy._execgrade)
 {
     *this = copy;
 }
 
-  Form::~Form(void) {}
+AForm::~AForm(void) {}
 
 /* Getters and Setters */
 
-std::string	Form::getName(void) const
+std::string	AForm::getName(void) const
 {
 	return (_name);
 }
 
-int	Form::getSigngrade(void) const
+int	AForm::getSigngrade(void) const
 {
 	return (_signgrade);
 }
 
-int	Form::getExecgrade(void) const
+int	AForm::getExecgrade(void) const
 {
 	return (_execgrade);
 }
 
-bool	Form::getSigned(void) const
+bool	AForm::getSigned(void) const
 {
 	return (_signed);
 }
 
 /* Exceptions */
 
-const char* Form::GradeTooHighException::what(void) const throw()
+const char* AForm::GradeTooHighException::what(void) const throw()
 {
 	return ("grade too high");
 }
 
-const char* Form::GradeTooLowException::what(void) const throw()
+const char* AForm::GradeTooLowException::what(void) const throw()
 {
 	return ("grade too low");
 }
 
 /* Functions */
 
-void	Form::beSigned(const Bureaucrat &bur)
+void	AForm::beSigned(const Bureaucrat &bur)
 {
 	if (_signed)
 		return ;

@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*   AAForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 15:37:50 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/19 15:37:51 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/31 17:49:00 by magonzal          #+#    #+#             */
+/*   Updated: 2023/10/31 17:49:04 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 # define YELLOW				"\x1b[33m"
 # define RESET				"\x1b[0m"
@@ -24,7 +23,7 @@
 #include "Bureaucrat.hpp"
 
 
-class Form
+class AForm
 {
 	private:
 	
@@ -48,11 +47,11 @@ class Form
 		
 	public:
 
-		Form(void);
-		Form(std::string const name, bool sign , int signrade , int execgrade);
-		Form(const Form &copy);
-		Form &operator=(const Form &copy);
-		~Form(void);
+		AForm(void);
+		AForm(std::string const name, bool sign , int signrade , int execgrade);
+		AForm(const AForm &copy);
+		AForm &operator=(const AForm &copy);
+		~AForm(void);
 
 		std::string	getName(void) const;
 		int			getSigngrade(void) const;

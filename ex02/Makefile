@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/01 15:41:00 by codespace         #+#    #+#              #
-#    Updated: 2023/10/04 17:52:02 by magonzal         ###   ########.fr        #
+#    Created: 2023/10/31 17:49:35 by magonzal          #+#    #+#              #
+#    Updated: 2023/10/31 17:49:37 by magonzal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 SRCS	= main.cpp Bureaucrat.cpp Form.cpp
 

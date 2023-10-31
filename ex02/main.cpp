@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 15:40:57 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/19 15:38:33 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/31 17:49:26 by magonzal          #+#    #+#             */
+/*   Updated: 2023/10/31 17:49:32 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* !!!!!! CAMBIAR TODOS LOS HEADERS!!!!!!! */
 
 #include "Bureaucrat.hpp"
 
