@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:49:49 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/18 19:21:51 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/18 19:31:41 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
     outfile.close();       
 }  
+
+AForm	*ShrubberyCreationForm::newShrubbery(std::string const target)
+{
+	return (new ShrubberyCreationForm(target));
+}

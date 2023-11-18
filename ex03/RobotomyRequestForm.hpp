@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 17:47:24 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/18 18:38:32 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/31 17:49:47 by magonzal          #+#    #+#             */
+/*   Updated: 2023/11/18 19:33:19 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
-#include <fstream>
+#include <cstdlib>
 
-class ShrubberyCreationForm: public AForm
+class RobotomyRequestForm: public AForm
 {
 	public:
 
-		ShrubberyCreationForm(std::string const target);
-		ShrubberyCreationForm(const ShrubberyCreationForm &other);
-		~ShrubberyCreationForm(void);
+		RobotomyRequestForm(std::string const target);
+		RobotomyRequestForm(const RobotomyRequestForm &other);
+		~RobotomyRequestForm(void);
 
-		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &other);
+		RobotomyRequestForm	&operator=(const RobotomyRequestForm &other);
 
 		void	execute(Bureaucrat const & executor) const;
+		static AForm	*newRobotomy(std::string const target);
 
 	private:
 
-		ShrubberyCreationForm(void);
+		RobotomyRequestForm(void);
 };
 
 #endif

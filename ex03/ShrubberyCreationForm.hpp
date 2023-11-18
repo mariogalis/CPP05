@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:47:24 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/18 18:38:32 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/18 19:32:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &other);
 
 		void	execute(Bureaucrat const & executor) const;
+		static AForm	*newShrubbery(std::string const target);
 
 	private:
 

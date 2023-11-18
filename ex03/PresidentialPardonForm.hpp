@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 17:47:24 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/18 18:38:32 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/31 17:49:43 by magonzal          #+#    #+#             */
+/*   Updated: 2023/11/18 19:36:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 #include "AForm.hpp"
-#include <fstream>
 
-class ShrubberyCreationForm: public AForm
+class PresidentialPardonForm: public AForm
 {
 	public:
 
-		ShrubberyCreationForm(std::string const target);
-		ShrubberyCreationForm(const ShrubberyCreationForm &other);
-		~ShrubberyCreationForm(void);
+		PresidentialPardonForm(std::string const target);
+		PresidentialPardonForm(const PresidentialPardonForm &other);
+		~PresidentialPardonForm(void);
 
-		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &other);
+		PresidentialPardonForm	&operator=(const PresidentialPardonForm &other);
 
 		void	execute(Bureaucrat const & executor) const;
+		static 	AForm	*newPresidential(std::string const target);
 
 	private:
 
-		ShrubberyCreationForm(void);
+		PresidentialPardonForm(void);
 };
 
 #endif

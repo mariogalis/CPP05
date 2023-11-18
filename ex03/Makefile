@@ -6,12 +6,12 @@
 #    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 17:49:35 by magonzal          #+#    #+#              #
-#    Updated: 2023/11/18 18:42:50 by codespace        ###   ########.fr        #
+#    Updated: 2023/11/18 19:38:26 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS	= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRCS	= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
@@ -19,7 +19,7 @@ SRCSB	=
 
 OBJB	= ${SRCSB:.cpp=.o}
 
-NAME	= moreforms
+NAME	= intern
 
 CXX	= c++
 
