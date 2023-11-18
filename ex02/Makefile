@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+         #
+#    By: mario <mario@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 17:49:35 by magonzal          #+#    #+#              #
-#    Updated: 2023/10/31 17:49:37 by magonzal         ###   ########.fr        #
+#    Updated: 2023/11/16 13:18:08 by mario            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS	= main.cpp Bureaucrat.cpp Form.cpp
+SRCS	= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 

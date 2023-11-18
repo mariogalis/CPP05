@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:48:41 by magonzal          #+#    #+#             */
-/*   Updated: 2023/10/31 17:48:45 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:41:41 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	
+	
 
 	std::cout << BLUE << "\t*********  New Tests  *********" <<  RESET << std::endl << std::endl;
 

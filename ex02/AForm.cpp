@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:48:56 by magonzal          #+#    #+#             */
-/*   Updated: 2023/10/31 17:56:42 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:18:54 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 std::ostream &operator<<(std::ostream &out, const AForm &form)
 {
 	out << "AForm name : " << form.getName();
-	out << " , aform signing grade : " << form.getSigngrade();
-	out << " , aform exec grade : " << form.getSigngrade();
+	out << " , Aform signing grade : " << form.getSigngrade();
+	out << " , Aform exec grade : " << form.getSigngrade();
 	if (form.getSigned())
 		out << " , signed : yes";
 	else

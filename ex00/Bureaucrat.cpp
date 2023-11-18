@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:47:58 by magonzal          #+#    #+#             */
-/*   Updated: 2023/10/31 17:48:01 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:33:29 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ Bureaucrat::Bureaucrat(void) : _name("Unnamed boring Bureaucrat"), _grade(150)
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name), _grade(grade)
 {
-	if(name.empty())
-		_name = "Unnamed boring Bureaucrat";
 	if (_grade > 150)
 		throw (GradeTooLowException());
 	else if (_grade < 1)
@@ -103,7 +101,6 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy)
 	if(this != &copy)
 	{
 		_grade = copy._grade;
-		_name = copy._name;
 	}
 	return(*this);
 }
