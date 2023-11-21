@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:47:24 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/21 20:17:21 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:32:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ShrubberyCreationForm: public AForm
 
 		void	execute(Bureaucrat const & executor) const;
 		static AForm	*newShrubbery(std::string const target);
-		
+
 	private:
 
 		ShrubberyCreationForm(void);

@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:52:05 by magonzal          #+#    #+#             */
-/*   Updated: 2023/10/24 18:12:40 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:59:20 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ Form::Form(std::string const name , int signrade , int execgrade) : _name(name),
 		throw (GradeTooLowException());
 	else if (_signgrade < 1 || _execgrade < 1)
 		throw (GradeTooHighException());
-	_signed = false;
 }
 
 Form::Form(const Form &copy) :  _name(copy._name), _signgrade(copy._signgrade), _execgrade(copy._execgrade)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:49:43 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/21 20:16:51 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:36:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

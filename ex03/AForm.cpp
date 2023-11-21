@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:48:56 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/18 18:41:16 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/21 19:59:03 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ std::ostream &operator<<(std::ostream &out, const AForm &form)
 {
 	out << "AForm name : " << form.getName();
 	out << " , Aform signing grade : " << form.getSigngrade();
-	out << " , Aform exec grade : " << form.getSigngrade();
+	out << " , Aform exec grade : " << form.getExecgrade();
 	if (form.getSigned())
 		out << " , signed : yes";
 	else
@@ -79,6 +79,11 @@ std::string	AForm::getTarget(void) const
 {
 	return (_target);
 }
+
+void	AForm::setSigned(bool sig)
+{
+	_signed = sig;
+} 
 
 /* Exceptions */
 

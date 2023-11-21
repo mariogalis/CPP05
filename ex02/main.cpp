@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:49:26 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/18 19:25:25 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/21 20:09:12 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,45 +24,63 @@ int	main(void)
 		Bureaucrat	bur("Alan", 140);
 		ShrubberyCreationForm	form("home");
 
+		std::cout << GREEN << bur << std::endl << RESET;
+		std::cout << YELLOW << form << std::endl << RESET;
 		bur.executeForm(form);
 		bur.signForm(form);
+		
+		std::cout << YELLOW << form << std::endl << RESET;
 		bur.executeForm(form);
-		bur.incrementGrade(1);
-		bur.executeForm(form);
-		bur.signForm(form);
-	 	bur.executeForm(form);
-		bur.incrementGrade(12);
+		
+		bur.incrementGrade(26);
+		std::cout << GREEN << bur << std::endl << RESET;
 		bur.executeForm(form);
 	}
 	std::cout << std::endl;
 		std::cout << BLUE << "\t*********  RobotomyRequestForm  *********" <<  RESET << std::endl << std::endl;
 	{
-	 	Bureaucrat	bur1("Bob", 73);
+	 	Bureaucrat	bur("Bob", 73);
 	 	RobotomyRequestForm	form("Jim");
 
-	 	bur1.executeForm(form);
-	 	bur1.signForm(form);
-	 	bur1.incrementGrade(1);
-	 	bur1.signForm(form);
-	 	bur1.executeForm(form);
-	 	bur1.incrementGrade(27);
-	 	bur1.executeForm(form);
+		std::cout << GREEN << bur << std::endl << RESET;
+		std::cout << YELLOW << form << std::endl << RESET;
+	 	bur.executeForm(form);
+	 	bur.signForm(form);
+	
+		
+		bur.incrementGrade(50);
+		std::cout << GREEN << bur << std::endl << RESET;
+		bur.signForm(form);
+		std::cout << YELLOW << form << std::endl << RESET;
+		bur.executeForm(form);
+
 	}
 	
 	 std::cout << std::endl;
 	 	std::cout << BLUE << "\t*********  PresidentialPardonForm  *********" <<  RESET << std::endl << std::endl;
 
 	{
-	 	Bureaucrat	bur2("Charlie", 26);
+	 	Bureaucrat	bur("Charlie", 26);
 	 	PresidentialPardonForm	form("Jim");
 
-	 	bur2.executeForm(form);
-	 	bur2.signForm(form);
-	 	bur2.incrementGrade(1);
-	 	bur2.signForm(form);
-	 	bur2.executeForm(form);
-	 	bur2.incrementGrade(20);
-	 	bur2.executeForm(form);
+		std::cout << GREEN << bur << std::endl << RESET;
+		std::cout << YELLOW << form << std::endl << RESET;
+	 	bur.executeForm(form);
+	 	bur.signForm(form);
+		
+	 	bur.incrementGrade(15);
+	 	bur.signForm(form);
+
+		std::cout << GREEN << bur << std::endl << RESET;
+		std::cout << YELLOW << form << std::endl << RESET;
+		
+	 	bur.executeForm(form);
+		
+	 	bur.incrementGrade(10);
+
+		std::cout << GREEN << bur << std::endl << RESET;
+		
+	 	bur.executeForm(form);
 	}
     return 0;
 }

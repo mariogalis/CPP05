@@ -27,7 +27,7 @@ class Bureaucrat;
 
 class AForm
 {
-	protected:
+	private:
 	
 		const std::string 	_name; 
 		bool        		_signed;
@@ -35,7 +35,6 @@ class AForm
 		const int     		_execgrade;
 		const std::string	_target;
 
-		void	checkexec(Bureaucrat const & executor) const;
 
 		class GradeTooHighException: public std::exception
 		{
@@ -64,12 +63,13 @@ class AForm
 		AForm &operator=(const AForm &copy);
 		~AForm(void);
 		
-		std::string	getName(void) const;
-		int			getSigngrade(void) const;
-		int			getExecgrade(void) const;
-		bool		getSigned(void) const;
-		std::string	getTarget(void) const;
-
+		std::string		getName(void) const;
+		int				getSigngrade(void) const;
+		int				getExecgrade(void) const;
+		bool			getSigned(void) const;
+		std::string		getTarget(void) const;
+		void			setSigned(bool sig);
+		void			checkexec(Bureaucrat const & executor) const;
 		void			beSigned(const Bureaucrat &bur);
 		virtual void	execute(Bureaucrat const & executor) const = 0;
 	
